@@ -16,16 +16,19 @@ export class RequestListComponent implements OnInit {
   constructor(private loanService: LoanService) { }
   // ----------------------------------------------------------------------------------------------
   ngOnInit(): void {
-       this.loanService.getAll().subscribe((data: any) => {
+       this.getAll()
+  }
+  // ----------------------------------------------------------------------------------------------
+  getAll(): void {
+         this.loanService.getAll().subscribe((data: any) => {
           this.results = data
           console.log(data)
       })
   }
-  // ----------------------------------------------------------------------------------------------
   update(j: any): void {
      console.log(this.results[j].status)
 
-     if (this.results[j].status == 'Pendiente'){
+     if (this.results[j].status === 'Pendiente'){
          let loanToModify = {
              id: j,
              cedula: this.results[j].cedula,
@@ -35,9 +38,11 @@ export class RequestListComponent implements OnInit {
              loanDate: this.results[j].loanDate,
              status: "Pagado"
          }
-         this.loanService.update(j, loanToModify).subscribe((data: any)=>[
-             console.log('Actualizado', loanToModify)
+         this.loanService.update(j+1, loanToModify).subscribe((data: any)=>[
+             console.log('Actualizado', loanToModify),
+             this.getAll()
          ])
+
      }
   }
   // ----------------------------------------------------------------------------------------------
