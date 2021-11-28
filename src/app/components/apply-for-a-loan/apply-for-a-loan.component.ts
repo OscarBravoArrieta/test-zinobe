@@ -1,6 +1,7 @@
  import { Component, OnInit } from '@angular/core';
  import { FormBuilder, FormGroup, Validators } from '@angular/forms'
  import { LoanService } from 'src/app/services/loan.service';
+ import { Router, CanActivate } from '@angular/router';
 
  @Component({
      selector: 'app-apply-for-a-loan',
@@ -17,7 +18,8 @@
 
      //-----------------------------------------------------------------------------------------------------
      constructor(public fb: FormBuilder,
-                 public loanService: LoanService) {
+                 public loanService: LoanService,
+                 public router: Router) {
          this.loanForm = this.fb.group({
              idUser: [null, [Validators.required]],
              name:[null, [Validators.required]],
@@ -39,6 +41,14 @@
      }
      //-----------------------------------------------------------------------------------------------------
      sendUser():void {
+         if(this.loanAmount == 0){
+            alert('Monto debe ser mayor que cero (0)')
+            return
+         }
+         if(this.loanAmount > Number(localStorage.getItem('baseCapital'))){
+             alert('Monto debe ser menor que base capital')
+             return
+         }
          this.statusForm = this.loanForm.invalid
 
          if (this.loanForm.valid) {
@@ -56,6 +66,9 @@
              this.loanService.create(newLoan).subscribe((data:any)=>{
                   console.log('Loan has bean created...', data )
              })
+             let saldo = Number(localStorage.getItem('baseCapital')) - this.loanAmount
+             localStorage.setItem('baseCapital', saldo.toString())
+             this.router.navigate(['/']);
          }
          else {
             console.log("There is invalid data in the form")
@@ -73,7 +86,7 @@
      }
      //-----------------------------------------------------------------------------------------------------
      getRandom(): number {
-        //console.log(Math.floor(Math.random() * (10 - 1)) + 1)
+
         if ((Math.floor(Math.random() * (10 - 1)) + 1) < 5) {
            return 1
         } else {

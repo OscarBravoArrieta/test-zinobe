@@ -1,10 +1,16 @@
-<div style="text-align:left" class = 'container'>
-  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Plataforma de préstamos</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/applay-for-a-loan">Solicitar péstamos</button>
-    <button mat-menu-item routerLink="/request-list-component">Listar solicirudes</button>
-  </mat-menu>
-</div>
+ <mat-card>
+     <div>
+         <button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Plataforma de préstamos</button>
+         <mat-menu #menu="matMenu">
+             <button mat-menu-item routerLink="/applay-for-a-loan">Solicitar péstamos</button>
+             <button mat-menu-item routerLink="/request-list-component">Listar solicirudes</button>
+         </mat-menu>
+     </div>
+     <div  style="float:right">
+         <app-current-amount></app-current-amount>
+     </div>
+ </mat-card>
+
 <div style="text-align:center">
-  <router-outlet></router-outlet>
+     <router-outlet></router-outlet>
 </div>

@@ -7,7 +7,7 @@
       "email": "martina@gmail.com",
       "loanAmount": "350000",
       "loanDate": "2021-11-28T00:34:52.025Z",
-      "status": "Aprobado"
+      "status": "Pagado"
     },
     {
       "id": 2,
@@ -52,6 +52,15 @@
       "email": "maria@gmail.com",
       "loanAmount": "8510000",
       "loanDate": "2021-11-28T00:45:33.368Z",
+      "status": "Aprobado"
+    },
+    {
+      "id": 7,
+      "cedula": "12369854",
+      "name": "CARLOS BENAVIDES",
+      "email": "carlosbenavides@gmail.com",
+      "loanAmount": "550000",
+      "loanDate": "2021-11-28T16:27:22.356Z",
       "status": "Aprobado"
     }
   ]
