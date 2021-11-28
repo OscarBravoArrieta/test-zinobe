@@ -28,7 +28,7 @@ export class RequestListComponent implements OnInit {
   update(j: any): void {
      console.log(this.results[j].status)
 
-     if (this.results[j].status === 'Pendiente'){
+     if (this.results[j].status === 'Aprobado'){
          let loanToModify = {
              id: j,
              cedula: this.results[j].cedula,

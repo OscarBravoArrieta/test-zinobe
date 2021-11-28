@@ -2,30 +2,30 @@
   "loan": [
     {
       "id": 1,
-      "cedula": 1143123654,
-      "name": "GEORGE MANTILLA",
-      "email": "georgematilla@gmail.com",
-      "loanAmount": 800000,
-      "loanDate": "2021-11-27",
-      "status": "Pendiente"
+      "cedula": "190180",
+      "name": "MARTINA LA PELIGROSA",
+      "email": "martina@gmail.com",
+      "loanAmount": "350000",
+      "loanDate": "2021-11-28T00:34:52.025Z",
+      "status": "Aprobado"
     },
     {
       "id": 2,
-      "cedula": 123456,
-      "name": "DANIELA VILLA",
-      "email": "danielavilla@gmail.com",
-      "loanAmount": 350000,
-      "loanDate": "2021-11-27",
-      "status": "Pagado"
+      "cedula": "190180",
+      "name": "MARTINA LA PELIGROSA",
+      "email": "martina@gmail.com",
+      "loanAmount": "350000",
+      "loanDate": "2021-11-28T00:34:52.025Z",
+      "status": "Aprobado"
     },
     {
       "id": 3,
-      "cedula": 123456,
-      "name": "DANIELA VILLA",
-      "email": "danielavilla@gmail.com",
-      "loanAmount": 350000,
-      "loanDate": "2021-11-27",
-      "status": "Pendiente"
+      "cedula": "190180",
+      "name": "MARTINA LA PELIGROSA",
+      "email": "martina@gmail.com",
+      "loanAmount": "350000",
+      "loanDate": "2021-11-28T00:34:52.025Z",
+      "status": "Aprobado"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "email": "martina@gmail.com",
       "loanAmount": "350000",
       "loanDate": "2021-11-28T00:34:52.025Z",
-      "status": "Pagado"
+      "status": "Aprobado"
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "email": "martina@gmail.com",
       "loanAmount": "350000",
       "loanDate": "2021-11-28T00:34:52.025Z",
-      "status": "pendiente"
+      "status": "Aprobado"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "email": "maria@gmail.com",
       "loanAmount": "8510000",
       "loanDate": "2021-11-28T00:45:33.368Z",
-      "status": "pagado"
+      "status": "Aprobado"
     }
   ]
 }

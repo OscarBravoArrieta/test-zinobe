@@ -10,7 +10,7 @@
      constructor(private http: HttpClient) { }
      // -------------------------------------------------------------------------------------------
 
-     getAll(): any {return this.http.get(`${environment.serverUrl}`)}
+     getAll(): any {return this.http.get(`${environment.serverUrl}/?status=Aprobado`)}
 
      // -------------------------------------------------------------------------------------------
 
