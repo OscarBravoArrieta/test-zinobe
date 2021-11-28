@@ -12,6 +12,7 @@
      statusForm: boolean = false
      loanAmount: number = 0
      loanDate: Date = new Date
+     status: String = ''
      results: any
 
      //-----------------------------------------------------------------------------------------------------
@@ -21,6 +22,7 @@
              idUser: [null, [Validators.required]],
              name:[null, [Validators.required]],
              email: [null, Validators.compose([Validators.email, Validators.required])],
+             status: [null, [Validators.required]]
          })
      }
      //-----------------------------------------------------------------------------------------------------
@@ -29,6 +31,11 @@
           this.loanService.getAll().subscribe((data: any) => {
             this.results = data
       })
+
+     this.status = this.getRandom() == 1 ? "Aprobado" : "Pendiente"
+
+     console.log(this.status)
+
      }
      //-----------------------------------------------------------------------------------------------------
      sendUser():void {
@@ -42,7 +49,7 @@
                 email: this.loanForm.value.email,
                 loanAmount: this.loanAmount,
                 loanDate: this.loanDate,
-                status: "pendiente"
+                status: this.status
              }
 
              console.log("All data is valid", newLoan)
@@ -65,4 +72,12 @@
          console.log('id recibido fecha:...', e)
      }
      //-----------------------------------------------------------------------------------------------------
+     getRandom(): number {
+        //console.log(Math.floor(Math.random() * (10 - 1)) + 1)
+        if ((Math.floor(Math.random() * (10 - 1)) + 1) < 5) {
+           return 1
+        } else {
+           return 0
+        }
+     }
  }

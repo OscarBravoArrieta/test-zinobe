@@ -37,6 +37,15 @@
                  <p>
                      <app-select-amount (loanAmount) = "getAmount($event)" (loanDate) = "getDate($event)"></app-select-amount>
                  </p>
+                 <p>
+                     <mat-form-field appearance="outline">
+                         <mat-label>Estado</mat-label>
+                         <input matInput placeholder="Estado" formControlName="status" [(ngModel)]="status" readonly>
+                         <!-- <mat-error *ngIf="this.loanForm.get('name')?.hasError('requerid') && statusForm"></mat-error> -->
+                        <!-- <mat-hint>Cédula</mat-hint> -->
+                     </mat-form-field>
+                 </p>
+
               </mat-card-content>
               <mat-divider inset></mat-divider>
               <mat-card-actions>
