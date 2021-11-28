@@ -1,0 +1,50 @@
+ <div class = "center-content">
+    <form [formGroup]="loanForm"
+    (ngSubmit)="sendUser()"
+    novalidate>
+         <mat-card class="example-card" style="width: 500px;">
+             <mat-card-header>
+                 <mat-card-title>Solicitud de préstamo</mat-card-title>
+                 <mat-card-subtitle>Diligencie los datos del préstamo</mat-card-subtitle>
+             </mat-card-header>
+             <mat-divider inset class="mt-10"></mat-divider>
+
+             <mat-card-content>
+                 <p>
+                     <mat-form-field appearance="outline">
+                         <mat-label>Cédula</mat-label>
+                         <input matInput placeholder="Cédula" formControlName="idUser">
+                         <mat-error *ngIf="this.loanForm.get('idUser')?.hasError('requerid') && statusForm"></mat-error>
+                        <!-- <mat-hint>Cédula</mat-hint> -->
+                      </mat-form-field>
+                 </p>
+                 <p>
+                     <mat-form-field appearance="outline">
+                         <mat-label>Nombre</mat-label>
+                         <input matInput placeholder="Nombre" formControlName="name">
+                         <mat-error *ngIf="this.loanForm.get('name')?.hasError('requerid') && statusForm"></mat-error>
+                        <!-- <mat-hint>Cédula</mat-hint> -->
+                     </mat-form-field>
+                 </p>
+                 <p>
+                     <mat-form-field appearance="outline">
+                         <mat-label>Correo</mat-label>
+                         <input matInput placeholder="Correo" formControlName = "email">
+                         <mat-error *ngIf="this.loanForm.get('email')?.hasError('email') && statusForm"></mat-error>
+                         <mat-error *ngIf="this.loanForm.get('email')?.hasError('requerid') && statusForm"></mat-error>
+                     </mat-form-field>
+                 </p>
+                 <p>
+                     <app-select-amount (loanAmount) = "getAmount($event)" (loanDate) = "getDate($event)"></app-select-amount>
+                 </p>
+              </mat-card-content>
+              <mat-divider inset></mat-divider>
+              <mat-card-actions>
+
+
+                 <button mat-button type = 'submit'>Enviar</button>
+                 <button mat-button routerLink="/">Cancelar</button>
+              </mat-card-actions>
+          </mat-card>
+     </form>
+ </div>

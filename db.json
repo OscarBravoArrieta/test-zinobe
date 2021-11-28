@@ -1,0 +1,58 @@
+{
+  "loan": [
+    {
+      "id": 1,
+      "cedula": 1143123654,
+      "name": "GEORGE MANTILLA",
+      "email": "georgematilla@gmail.com",
+      "loanAmount": 800000,
+      "loanDate": "2021-11-27",
+      "status": "Pendiente"
+    },
+    {
+      "id": 2,
+      "cedula": 123456,
+      "name": "DANIELA VILLA",
+      "email": "danielavilla@gmail.com",
+      "loanAmount": 350000,
+      "loanDate": "2021-11-27",
+      "status": "Pagado"
+    },
+    {
+      "id": 3,
+      "cedula": 123456,
+      "name": "DANIELA VILLA",
+      "email": "danielavilla@gmail.com",
+      "loanAmount": 350000,
+      "loanDate": "2021-11-27",
+      "status": "Pendiente"
+    },
+    {
+      "id": 4,
+      "cedula": "190180",
+      "name": "MARTINA LA PELIGROSA",
+      "email": "martina@gmail.com",
+      "loanAmount": "350000",
+      "loanDate": "2021-11-28T00:34:52.025Z",
+      "status": "Pagado"
+    },
+    {
+      "id": 5,
+      "cedula": "190180",
+      "name": "MARTINA LA PELIGROSA",
+      "email": "martina@gmail.com",
+      "loanAmount": "350000",
+      "loanDate": "2021-11-28T00:34:52.025Z",
+      "status": "pendiente"
+    },
+    {
+      "id": 6,
+      "cedula": "3002012289",
+      "name": "MARIA CLAUDIA RAMIREZ",
+      "email": "maria@gmail.com",
+      "loanAmount": "8510000",
+      "loanDate": "2021-11-28T00:45:33.368Z",
+      "status": "pagado"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<div class = "">
+     <p>
+         <mat-form-field appearance="outline">
+             <mat-label>Monto</mat-label>
+             <input matInput placeholder="Monto" [(ngModel)]="valueToSend" (change)="sendAmount()">
+             <!-- <mat-hint>Cédula</mat-hint> -->
+         </mat-form-field>
+     </p>
+     <p>
+         <mat-form-field appearance="fill">
+             <mat-label>Fecha de pago</mat-label>
+             <input matInput [matDatepicker]="picker" [(ngModel)]="dateToSend" (dateChange)="sendDate()" (focus) = "sendDate()">
+             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+             <mat-datepicker #picker></mat-datepicker>
+         </mat-form-field>
+     </p>
+</div>
