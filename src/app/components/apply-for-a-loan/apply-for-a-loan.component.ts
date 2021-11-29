@@ -50,10 +50,10 @@
              return
          }
          this.statusForm = this.loanForm.invalid
-
+          //alert(this.results.length + 1)
          if (this.loanForm.valid) {
              let newLoan = {
-                id: this.results.length + 1,
+                //id: this.results.length + 1,
                 cedula: this.loanForm.value.idUser,
                 name: this.loanForm.value.name,
                 email: this.loanForm.value.email,
@@ -66,9 +66,15 @@
              this.loanService.create(newLoan).subscribe((data:any)=>{
                   console.log('Loan has bean created...', data )
              })
-             let saldo = Number(localStorage.getItem('baseCapital')) - this.loanAmount
-             localStorage.setItem('baseCapital', saldo.toString())
-             this.router.navigate(['/']);
+             if (this.status == 'Aprobado') {
+                 let saldo = Number(localStorage.getItem('baseCapital')) - this.loanAmount
+                 localStorage.setItem('baseCapital', saldo.toString())
+             } else {
+                 alert('Préstamo no fue aprobado')
+             }
+             this.router.navigate(['/'])
+
+
          }
          else {
             console.log("There is invalid data in the form")

@@ -16,7 +16,7 @@
       "email": "martina@gmail.com",
       "loanAmount": "350000",
       "loanDate": "2021-11-28T00:34:52.025Z",
-      "status": "Aprobado"
+      "status": "Pagado"
     },
     {
       "id": 3,
@@ -38,30 +38,93 @@
     },
     {
       "id": 5,
-      "cedula": "190180",
-      "name": "MARTINA LA PELIGROSA",
-      "email": "martina@gmail.com",
-      "loanAmount": "350000",
-      "loanDate": "2021-11-28T00:34:52.025Z",
-      "status": "Aprobado"
-    },
-    {
-      "id": 6,
       "cedula": "3002012289",
       "name": "MARIA CLAUDIA RAMIREZ",
       "email": "maria@gmail.com",
       "loanAmount": "8510000",
       "loanDate": "2021-11-28T00:45:33.368Z",
+      "status": "Pagado"
+    },
+    {
+      "id": 6,
+      "cedula": "12369854",
+      "name": "EDGARDO MARTINEZ",
+      "email": "edgardomartinez@gmail.com",
+      "loanAmount": "100000",
+      "loanDate": "2021-11-29T13:01:04.320Z",
       "status": "Aprobado"
     },
     {
       "id": 7,
-      "cedula": "12369854",
-      "name": "CARLOS BENAVIDES",
-      "email": "carlosbenavides@gmail.com",
-      "loanAmount": "550000",
-      "loanDate": "2021-11-28T16:27:22.356Z",
+      "cedula": "7532159",
+      "name": "ALEXANDRA ROMERO PEREZ",
+      "email": "alexandraromeroperez@gmail.com",
+      "loanAmount": "200000",
+      "loanDate": "2021-11-29T12:45:02.307Z",
+      "status": "Pagado"
+    },
+    {
+      "id": 8,
+      "cedula": "7532159",
+      "name": "ALEXANDRA ROMERO PEREZ",
+      "email": "alexandraromeroperez@gmail.com",
+      "loanAmount": "200000",
+      "loanDate": "2021-11-29T12:45:02.307Z",
+      "status": "Pagado"
+    },
+    {
+      "id": 9,
+      "cedula": "7532159",
+      "name": "ALEXANDRA ROMERO PEREZ",
+      "email": "alexandraromeroperez@gmail.com",
+      "loanAmount": "200000",
+      "loanDate": "2021-11-29T12:45:02.307Z",
       "status": "Aprobado"
+    },
+    {
+      "id": 10,
+      "cedula": "73205478",
+      "name": "LUIS CARLOS LOPEZ",
+      "email": "luiscarlosopez@gmail.com",
+      "loanAmount": "100000",
+      "loanDate": "2021-11-29T12:55:45.442Z",
+      "status": "Pagado"
+    },
+    {
+      "id": 11,
+      "cedula": "12369854",
+      "name": "EDGARDO MARTINEZ",
+      "email": "edgardomartinez@gmail.com",
+      "loanAmount": "100000",
+      "loanDate": "2021-11-29T13:01:04.320Z",
+      "status": "Pagado"
+    },
+    {
+      "cedula": "7342863147",
+      "name": "GERMAN VILLADIEGO",
+      "email": "gvilladiego@gmail.com",
+      "loanAmount": "100000",
+      "loanDate": "2021-11-29T13:12:18.465Z",
+      "status": "Aprobado",
+      "id": 12
+    },
+    {
+      "cedula": "752145822",
+      "name": "JOSE PUERTA",
+      "email": "josepuerta@gmail.com",
+      "loanAmount": "120000",
+      "loanDate": "2021-11-29T13:15:26.091Z",
+      "status": "Aprobado",
+      "id": 13
+    },
+    {
+      "cedula": "852332145",
+      "name": "ESTHER MARINA SILGADO",
+      "email": "esthermarinasilgado@gmail.com",
+      "loanAmount": "100000",
+      "loanDate": "2021-11-29T13:17:58.399Z",
+      "status": "Aprobado",
+      "id": 14
     }
   ]
 }

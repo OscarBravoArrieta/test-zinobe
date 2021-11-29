@@ -26,7 +26,9 @@ export class RequestListComponent implements OnInit {
       })
   }
   update(j: any): void {
-     console.log(this.results[j].status)
+     //console.log(this.results[j].status)
+     //alert(this.results[j].id)
+
 
      if (this.results[j].status === 'Aprobado'){
          let loanToModify = {
@@ -38,7 +40,7 @@ export class RequestListComponent implements OnInit {
              loanDate: this.results[j].loanDate,
              status: "Pagado"
          }
-         this.loanService.update(j+1, loanToModify).subscribe((data: any)=>[
+         this.loanService.update(this.results[j].id, loanToModify).subscribe((data: any)=>[
              console.log('Actualizado', loanToModify),
              this.getAll()
          ])
